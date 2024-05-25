@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="display">
+    {% for i in books %}
+    <div class="div1">
+        <div class="card">
+            <img src="{{ i.cover }}" alt="" width="60%">
+            <h4 class="cardtitle">{{ i.name }}</h4>
+            <p style="margin: 20px;">{{ i.Author }}</p>
+            <a href="/book/{{ i.id }}"><button class="btn" type="button"> Read </button></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
